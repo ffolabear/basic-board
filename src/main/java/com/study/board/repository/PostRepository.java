@@ -36,4 +36,8 @@ public class PostRepository {
         findPost.setContent(updatedPost.getContent());
     }
 
+    public void deletePost(Long id) {
+        posts.remove(id);
+    }
+
 }
