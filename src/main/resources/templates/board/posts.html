@@ -46,8 +46,8 @@
                 <td>
                     <a href="post.html" th:href="@{/board/posts/{postId} (postId=${post.id})}" th:text="${post.id}">게시물 ID</a>
                 </td>
-                <td th:text="${post.title}">회원 이메일</td>
-                <td th:text="${post.author}">회원 이름</td>
+                <td th:text="${post.author}">저자</td>
+                <td th:text="${post.title}">제목</td>
             </tr>
             </tbody>
 
