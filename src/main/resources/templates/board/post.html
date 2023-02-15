@@ -1,13 +1,17 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>글 상세보기</title>
-  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/basic.css" rel="stylesheet">
   <style>
     .container {
       max-width: 560px;
+    }
+
+    textarea {
+      resize: none;
     }
 
   </style>
@@ -20,10 +24,10 @@
   <div class="py-5 text-center">
     <h2>상품 상세</h2>
   </div>
+
   <div>
     <!--    저장 완료일때 뜨는 메세지    -->
     <h2 th:if="${param.status}" th:text="'저장 완료'"></h2>
-
     <label for="postId">게시물 ID</label>
     <input type="text" id="postId" name="postId" class="form-control" value="1" th:value="${post.id}" readonly>
   </div>
@@ -41,7 +45,8 @@
 
   <div>
     <label for="content">글 내용</label>
-    <input type="text" id="content" name="content" class="form-control" value="content" th:value="${post.content}" readonly>
+    <textarea type="text" id="content" name="content" class="form-control" th:text="${post.content}" readonly>
+    </textarea>
   </div>
 
 
@@ -65,7 +70,6 @@
   </div>
 
 </div> <!-- /container -->
-
 
 </body>
 </html>
