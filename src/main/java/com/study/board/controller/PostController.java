@@ -31,7 +31,7 @@ public class PostController {
     }
 
     @GetMapping("/{postId}")
-    public String postDetail(@PathVariable long postId, Model model) {
+    public String postDetail(@PathVariable Long postId, Model model) {
         Post post = postRepository.findPost(postId);
         model.addAttribute("post", post);
         return "board/post";
