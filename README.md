@@ -71,6 +71,8 @@
 <br>
 <br>
 
+<hr>
+
 #### 3주차 요구사항
 
 - <u> DB연동한 게시판에 Validation추가하고 Pagination하기 </u>
